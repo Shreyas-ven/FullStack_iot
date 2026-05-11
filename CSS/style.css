@@ -11,3 +11,19 @@ nav a{
     color:rgb(109, 3, 3);
     margin:5%;
 }
+
+.container{
+    background-color: blueviolet;
+}
+
+.container .div1{
+    background-color: blanchedalmond;
+}
+
+.container .div2{
+    background-color: blanchedalmond;
+}
+
+.container .div3{
+    background-color: blanchedalmond;
+}
