@@ -129,3 +129,23 @@ button{
 button:hover{
     background:#3E2723;
 }
+
+table, th, td{
+    border:1px solid black;
+}
+
+table{
+    width:100%;
+    background-color: azure;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #623d36;
+    color: #ccc;
+    padding:7px;
+}
+td{
+    text-align: center;
+    padding: 5px;
+}
