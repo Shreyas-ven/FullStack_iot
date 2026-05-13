@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event listener</title>
+    </head>
+    <body>
+        <button id="btn">Click Me!</button>
+        <script>
+            let element = document.getElementById("btn");
+
+            element.addEventListener("click",function(){
+                alert("Button clicked")
+            });
+            element.addEventListener("mouseover",function(){
+                alert("Pointer is upon the button")
+            });
+
+            element.addEventListener("mouseover",function(){
+                element.style.backgroundColor="Red";
+            });
+        </script>
+    </body>
+</html>

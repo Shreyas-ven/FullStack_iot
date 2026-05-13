@@ -1,0 +1,157 @@
+header{
+    background-color: #5C4033;
+    color: #FFF8F0;
+    text-align: center;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    background-color: #A47148;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a{
+    font-family: fantasy;
+    margin: 20px;
+    color: #FFF8F0;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #FFE4C4;
+    border-bottom: 3px solid #FFE4C4;
+    padding-bottom: 5px;
+}
+
+.box{
+    background-color: #F5E6D3;
+    color: #3E2723;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+ul{
+    background-color: #E6CCB2;
+    color: #3E2723;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+footer{
+    background-color: #3E2723;
+    color: #F5E6D3;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    border-top: 4px solid #A47148;
+}
+
+footer p{
+    margin: 6px;
+    font-size: 15px;
+}
+
+.register-section{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.register-form{
+    background:white;
+    padding:35px;
+    width:400px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.register-form h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#444;
+}
+
+.input-group input,
+.input-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+    border-color:#4facfe;
+    outline:none;
+    box-shadow:0 0 5px rgba(79,172,254,0.5);
+}
+
+.gender-box{
+    display:flex;
+    gap:20px;
+    margin-top:5px;
+}
+
+.gender-box label{
+    font-weight:normal;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background: #A47148;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#3E2723;
+}
+
+table, th, td{
+    border:1px solid black;
+}
+
+table{
+    width:100%;
+    background-color: azure;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #623d36;
+    color: #ccc;
+    padding:7px;
+}
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+@media(max-width:350px){
+    .register-section{
+        flex-direction: column;
+    }
+}
