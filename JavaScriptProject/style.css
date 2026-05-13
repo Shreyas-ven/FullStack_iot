@@ -154,4 +154,7 @@ td{
     .register-section{
         flex-direction: column;
     }
+    .register-form{
+        max-width: 200px;
+    }
 }
