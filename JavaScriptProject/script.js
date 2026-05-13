@@ -6,10 +6,22 @@ if (signupForm ){
     let email=document.getElementById("email").value;
     let password=document.getElementById("password").value;
 
+    let pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[@#$&!/])(?=.*\d).{8,}$/
+
+    if(name =="" || email =="" || password ==""){
+        alert("All Fields Required")
+        return false;
+    }
+    if(!pattern.test(password)){
+        alert("Password must contain 1 capital letter, 1 small letter, 1 special character, 1 Digit and minimum 8 length");
+        return false;
+    }
+
 let user={name:name,email:email, password:password};
 
 localStorage.setItem("user",JSON.stringify(user));
-alert("Signup ")
+alert("Sign Up Successful !")
+window.location.href="login.html";
 });
 }
 
@@ -21,7 +33,7 @@ if(loginForm){
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
 
-        //reding the data from local storage
+        //reding the data from local storage 
         let user = JSON.parse(localStorage.getItem("user"));
 
         if(email==user.email && password == user.password){
