@@ -18,25 +18,21 @@
             <a href="#" id="logoutBtn">Logout</a>
             
         </nav>
-        <section>
+        <section class = "register-section">
             <h1>DAILY TASKS</h1>
+            <div >
+                <label>Add Task :</label>
+                <input type="text" id="taskInput"><br><br>
+                <button id="addTaskBtn">Add Task </button>
+            </div>
             <table>
-                <tr>
-                    <th>Tasks</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Learn Java</td>
-                    <td>Completed</td>
-                </tr>
-                <tr>
-                    <td>Revise Notes</td>
-                    <td>Pending</td>
-                </tr>
-                <tr>
-                    <td>Learn JavaSript</td>
-                    <td>Pending</td>
-                </tr>
+                <thead>
+                    <th>Task</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id ="taskList">
+
+                </tbody>
             </table>
         </section>
 

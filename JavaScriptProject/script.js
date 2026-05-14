@@ -103,3 +103,32 @@ if(loginStatus == "true"){
         logoutBtn.style.display="none";
     }
 }
+
+//Dynamically adding Tasks in tasks.html
+let addButton = document.getElementById("addTaskBtn");
+
+if(addButton){
+    addButton.addEventListener("click", function(){
+
+        let task = document.getElementById("taskInput").value;
+
+        if(task == ""){
+            alert("Please enter the task first!");
+            return;
+        }
+
+        // fin "tasks" key in local storage if not found create empty array
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        // Add new task
+        tasks.push(task);
+
+        // Save updated tasks array
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
+        alert("Task Added Successfully!");
+
+        // Clear input field
+        document.getElementById("taskInput").value = "";
+    });
+}
