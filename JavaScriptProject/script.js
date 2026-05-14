@@ -117,7 +117,7 @@ if(addButton){
             return;
         }
 
-        // fin "tasks" key in local storage if not found create empty array
+        // find "tasks" key in local storage if not found create empty array
         let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
         // Add new task
@@ -132,3 +132,43 @@ if(addButton){
         document.getElementById("taskInput").value = "";
     });
 }
+
+showTasks();
+function showTasks(){
+
+    let taskList = document.getElementById("taskList");
+
+    if(!taskList){
+        return;
+    }
+
+    taskList.innerHTML = "";
+
+    let taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    for(let i = 0; i < taskArray.length; i++){
+
+        taskList.innerHTML += `
+        <tr>
+            <td>${taskArray[i]}</td>
+            <td>
+                <button onclick="deleteTask(${i})">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        `;
+    }
+}
+function deleteTask(index){
+
+    let taskArray = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    taskArray.splice(index, 1);
+
+    localStorage.setItem("tasks", JSON.stringify(taskArray));
+
+    showTasks();
+}
+
+
