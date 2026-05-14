@@ -69,3 +69,37 @@ if(currentPage.includes("tasks.html")){
         window.location.href = "login.html";
     }
 }
+
+
+//Logout button login
+let LogoutButton = document.getElementById("logoutBtn");
+
+if(LogoutButton){
+    LogoutButton.addEventListener("click",function(){
+        localStorage.removeItem("isLoggedIn");
+        alert("Logged Out Successfully!");
+        window.location.href = "index.html";
+    });
+}
+
+//Dynamic NavBar Logic
+
+let signuplink = document.getElementById("signupLink");
+let loginlink = document.getElementById("loginLink");
+let logoutBtn = document.getElementById("logoutBtn");
+
+let loginStatus = localStorage.getItem("isLoggedIn");
+
+if(loginStatus == "true"){
+    if(signuplink){
+        signuplink.style.display = "none";
+    }
+
+    if(loginlink){
+        loginlink.style.display = "none";
+    }
+}else{
+    if(logoutBtn){
+        logoutBtn.style.display="none";
+    }
+}
