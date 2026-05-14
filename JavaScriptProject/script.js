@@ -39,6 +39,7 @@ if(loginForm){
         if(email==user.email && password == user.password){
             alert("Login Successfull!");
             //redirect to home page
+            localStorage.setItem("isLoggedIn","true")
             window.location.href="index.html";
         }else{
             alert("Invalid Email or Password!");
@@ -50,8 +51,21 @@ let heading=document.getElementById("welcomeMessage");
 
 if(heading){
     let user=JSON.parse(localStorage.getItem("user"));
+    let isLoggedIn = localStorage.getItem("isLoggedIn");
 
-    if(user){
-        heading.innerHTML="Welcome" + user.name + "!";
+    if(user && isLoggedIn === "true"){
+    heading.innerHTML = "Welcome " + user.name + "!";
+}
+}
+
+// Protecting the tasks.html from opening without log in
+let currentPage=window.location.pathname;
+
+if(currentPage.includes("tasks.html")){
+    let loginStatus = JSON.parse(localStorage.getItem("isLoggedIn"));
+
+    if (!loginStatus){
+        alert("Please Log In First!");
+        window.location.href = "login.html";
     }
 }
