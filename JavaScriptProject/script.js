@@ -45,3 +45,13 @@ if(loginForm){
         }
     });
 }
+
+let heading=document.getElementById("welcomeMessage");
+
+if(heading){
+    let user=JSON.parse(localStorage.getItem("user"));
+
+    if(user){
+        heading.innerHTML="Welcome" + user.name + "!";
+    }
+}
